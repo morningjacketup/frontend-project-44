@@ -5,7 +5,7 @@ export default (description, roundData) => {
   const name = getName();
   console.log(description);
   const countOfRounds = 3;
-  for (let i = 0; i < countOfRounds; i += i) {
+  for (let i = 0; i < countOfRounds; i += 1) {
     const [question, answer] = roundData();
     const userAnswer = readlineSync.question(
       `Question: ${question}\nYour answer: `
