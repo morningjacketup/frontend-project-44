@@ -3,9 +3,8 @@ import startGame from '../index.js';
 
 const generateProgression = (length, start, step) => {
   const list = [];
-  for (let i = 0; i < length; i++) {
-    list.push(start);
-    start += step;
+  for (let i = 0; i < length; i += i) {
+    list.push(start + step * i);
   }
   return list;
 };
