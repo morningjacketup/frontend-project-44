@@ -17,7 +17,7 @@ const generateRoundData = () => {
   const secondNumber = generateRandomNumber(1, 100);
   return [
     `${firstNumber} ${secondNumber}`,
-    `${calculateGCD(firstNumber, secondNumber)}`,
+    `${calculateGCD(firstNumber, secondNumber)}`
   ];
 };
 
