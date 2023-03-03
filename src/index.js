@@ -15,5 +15,5 @@ export default (description, roundData) => {
             return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet\'s try again, ${name}!`);
         }
     }
-    return console.log(`Congratulations, ${name}`);
+    return console.log(`Congratulations, ${name}!`);
 }
