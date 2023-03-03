@@ -1,5 +1,5 @@
-import startGame from "../index.js";
-import generateRandomNumber from "../utils.js";
+import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -15,7 +15,7 @@ const isPrime = (number) => {
 
 const generateRoundData = () => {
   const randomNumber = generateRandomNumber(0, 100);
-  return [`${randomNumber}`, isPrime(randomNumber) ? "yes" : "no"];
+  return [`${randomNumber}`, isPrime(randomNumber) ? 'yes' : 'no'];
 };
 
 export default () => {

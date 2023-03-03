@@ -1,5 +1,5 @@
-import startGame from "../index.js";
-import generateRandomNumber from "../utils.js";
+import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
 
 const calculateGCD = (number, number2) => {
   while (number2 != number) {
@@ -23,7 +23,7 @@ const generateRoundData = () => {
 
 export default () => {
   startGame(
-    "Find the greatest common divisor of given numbers.",
+    'Find the greatest common divisor of given numbers.',
     generateRoundData
   );
 };

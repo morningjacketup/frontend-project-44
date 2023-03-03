@@ -1,5 +1,5 @@
-import generateRandomNumber from "../utils.js";
-import startGame from "../index.js";
+import generateRandomNumber from '../utils.js';
+import startGame from '../index.js';
 
 const generateProgression = (length, start, step) => {
   const list = [];
@@ -17,11 +17,11 @@ const generateRoundData = () => {
   const list = generateProgression(randomLength, randomStart, randomStep);
   const randomIndex = generateRandomNumber(0, list.length - 1);
   const answer = String(list[randomIndex]);
-  list[randomIndex] = "..";
-  const question = list.join(" ");
+  list[randomIndex] = '..';
+  const question = list.join(' ');
   return [question, answer];
 };
 
 export default () => {
-  startGame("What number is missing in the progression?", generateRoundData);
+  startGame('What number is missing in the progression?', generateRoundData);
 };

@@ -1,13 +1,13 @@
-import startGame from "../index.js";
-import generateRandomNumber from "../utils.js";
+import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
 
 const calculate = (firstNumber, secondNumber, operator) => {
   switch (operator) {
-    case "+":
+    case '+':
       return firstNumber + secondNumber;
-    case "-":
+    case '-':
       return firstNumber - secondNumber;
-    case "*":
+    case '*':
       return firstNumber * secondNumber;
     default:
       return "operation doesn't exists";
@@ -15,7 +15,7 @@ const calculate = (firstNumber, secondNumber, operator) => {
 };
 
 const getOperator = () => {
-  const operations = ["+", "-", "*"];
+  const operations = ['+', '-', '*'];
   return operations[Math.floor(Math.random() * operations.length)];
 };
 
@@ -30,5 +30,5 @@ const generateRoundData = () => {
 };
 
 export default () => {
-  startGame("What is the result of the expression?", generateRoundData);
+  startGame('What is the result of the expression?', generateRoundData);
 };

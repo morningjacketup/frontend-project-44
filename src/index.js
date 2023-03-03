@@ -1,5 +1,5 @@
-import readlineSync from "readline-sync";
-import getName from "./cli.js";
+import readlineSync from 'readline-sync';
+import getName from './cli.js';
 
 export default (description, roundData) => {
   const name = getName();
@@ -11,7 +11,7 @@ export default (description, roundData) => {
       `Question: ${question}\nYour answer: `
     );
     if (userAnswer === answer) {
-      console.log("Correct");
+      console.log('Correct');
     } else {
       return console.log(
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet\'s try again, ${name}!`

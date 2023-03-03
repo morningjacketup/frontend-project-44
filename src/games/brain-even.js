@@ -1,9 +1,9 @@
-import generateRandomNumber from "../utils.js";
-import startGame from "../index.js";
+import generateRandomNumber from '../utils.js';
+import startGame from '../index.js';
 
 const generateRoundData = () => {
   const randomNumber = generateRandomNumber(1, 100);
-  let answer = randomNumber % 2 === 0 ? "yes" : "no";
+  let answer = randomNumber % 2 === 0 ? 'yes' : 'no';
   return [`${randomNumber}`, answer];
 };
 
