@@ -19,8 +19,5 @@ const generateRoundData = () => {
 };
 
 export default () => {
-  startGame(
-    'Answer "yes" if given number is prime. Otherwise answer "no".',
-    generateRoundData
-  );
+  startGame('Answer "yes" if given number is prime. Otherwise answer "no".', generateRoundData);
 };

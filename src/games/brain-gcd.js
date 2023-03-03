@@ -4,8 +4,10 @@ import generateRandomNumber from '../utils.js';
 const calculateGCD = (number, number2) => {
   while (number2 !== number) {
     if (number > number2) {
+      // eslint-disable-next-line no-param-reassign
       number -= number2;
     } else {
+      // eslint-disable-next-line no-param-reassign
       number2 -= number;
     }
   }
@@ -15,15 +17,9 @@ const calculateGCD = (number, number2) => {
 const generateRoundData = () => {
   const firstNumber = generateRandomNumber(1, 100);
   const secondNumber = generateRandomNumber(1, 100);
-  return [
-    `${firstNumber} ${secondNumber}`,
-    `${calculateGCD(firstNumber, secondNumber)}`
-  ];
+  return [`${firstNumber} ${secondNumber}`, `${calculateGCD(firstNumber, secondNumber)}`];
 };
 
 export default () => {
-  startGame(
-    'Find the greatest common divisor of given numbers.',
-    generateRoundData
-  );
+  startGame('Find the greatest common divisor of given numbers.', generateRoundData);
 };

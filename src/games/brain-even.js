@@ -8,8 +8,5 @@ const generateRoundData = () => {
 };
 
 export default () => {
-  startGame(
-    'Answer "yes" if the number is even, otherwise answer "no".',
-    generateRoundData
-  );
+  startGame('Answer "yes" if the number is even, otherwise answer "no".', generateRoundData);
 };

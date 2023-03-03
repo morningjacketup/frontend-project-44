@@ -8,13 +8,13 @@ export default (description, roundData) => {
   for (let i = 0; i < countOfRounds; i += 1) {
     const [question, answer] = roundData();
     const userAnswer = readlineSync.question(
-      `Question: ${question}\nYour answer: `
+      `Question: ${question}\nYour answer: `,
     );
     if (userAnswer === answer) {
       console.log('Correct');
     } else {
       return console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet's try again, ${name}!`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet's try again, ${name}!`,
       );
     }
   }
