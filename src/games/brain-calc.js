@@ -20,8 +20,11 @@ const getOperator = () => {
 };
 
 const generateRoundData = () => {
-  const firstNumber = generateRandomNumber(1, 100);
-  const secondNumber = generateRandomNumber(1, 100);
+  const minNumber = 1;
+  const maxNumber = 100;
+
+  const firstNumber = generateRandomNumber(minNumber, maxNumber);
+  const secondNumber = generateRandomNumber(minNumber, maxNumber);
   const operator = getOperator();
   return [
     `${firstNumber} ${operator} ${secondNumber}`,

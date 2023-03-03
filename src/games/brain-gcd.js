@@ -15,8 +15,11 @@ const calculateGCD = (number, number2) => {
 };
 
 const generateRoundData = () => {
-  const firstNumber = generateRandomNumber(1, 100);
-  const secondNumber = generateRandomNumber(1, 100);
+  const maxNumber = 100;
+  const minNumber = 1;
+
+  const firstNumber = generateRandomNumber(minNumber, maxNumber);
+  const secondNumber = generateRandomNumber(minNumber, maxNumber);
   return [`${firstNumber} ${secondNumber}`, `${calculateGCD(firstNumber, secondNumber)}`];
 };
 

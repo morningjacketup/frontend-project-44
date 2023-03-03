@@ -10,9 +10,16 @@ const generateProgression = (length, start, step) => {
 };
 
 const generateRoundData = () => {
-  const randomStart = generateRandomNumber(0, 100);
-  const randomStep = generateRandomNumber(1, 5);
-  const randomLength = generateRandomNumber(6, 10);
+  const maxNumber = 100;
+  const minNumber = 0;
+  const maxStepNumber = 5;
+  const minStepNumber = 1;
+  const maxListLength = 10;
+  const minListLength = 6;
+
+  const randomStart = generateRandomNumber(minNumber, maxNumber);
+  const randomStep = generateRandomNumber(minStepNumber, maxStepNumber);
+  const randomLength = generateRandomNumber(minListLength, maxListLength);
   const list = generateProgression(randomLength, randomStart, randomStep);
   const randomIndex = generateRandomNumber(0, list.length - 1);
   const answer = String(list[randomIndex]);

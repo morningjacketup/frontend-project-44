@@ -14,7 +14,10 @@ const isPrime = (number) => {
 };
 
 const generateRoundData = () => {
-  const randomNumber = generateRandomNumber(0, 100);
+  const maxNumber = 100;
+  const minNumber = 0;
+
+  const randomNumber = generateRandomNumber(minNumber, maxNumber);
   return [`${randomNumber}`, isPrime(randomNumber) ? 'yes' : 'no'];
 };
 
