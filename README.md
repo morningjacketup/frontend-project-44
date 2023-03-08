@@ -5,6 +5,9 @@
 
 <hr>
 <h1>Игра: "Калькулятор". </h1>
+How to play:
+
+> MAKE brain-calc
 
 Пользователю показывается случайное математическое выражение, которое нужно вычислить и записать правильный ответ.<br>
 Example of Calculation Game: 
@@ -12,6 +15,9 @@ Example of Calculation Game:
 
 <hr>
 <h1>Игра: "Проверка на чётность". </h1>
+How to play:
+
+> MAKE brain-even
 
 Пользователю показывается число и ему нужно ответить yes, если число четное, или no - если не четное.<br>
 Example of Even Game:
@@ -19,6 +25,9 @@ Example of Even Game:
 
 <hr>
 <h1>Игра "НОД". </h1>
+How to play:
+
+> MAKE brain-gcd
 
 Пользователю показывается два случайных числа, необходимо вычислить и ввести наибольший общий делитель этих чисел.<br>
 Example of Find Greater Division game:
@@ -26,6 +35,9 @@ Example of Find Greater Division game:
 
 <hr>
 <h1>Игра "Простое ли число?". </h1>
+How to play:
+
+> MAKE brain-prime
 
 Пользователю показывается число, необходимо ответить yes, если число простое, в противоположном случае no.<br>
 Example of Prime Game: 
@@ -33,6 +45,9 @@ Example of Prime Game:
 
 <hr>
 <h1>Игра "Арифметическая прогрессия". </h1>
+How to play:
+
+> MAKE brain-progression
 
 Пользователю показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Необходимо определить это число.<br>
 Example of Progression Game: 
