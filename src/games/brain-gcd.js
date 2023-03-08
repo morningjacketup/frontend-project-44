@@ -7,10 +7,10 @@ const calculateGCD = (number, number2) => {
   let firstArgument = number;
   let secondArgument = number2;
   while (secondArgument !== firstArgument) {
-    if (number > number2) {
-      firstArgument -= number2;
+    if (firstArgument > secondArgument) {
+      firstArgument -= secondArgument;
     } else {
-      secondArgument -= number;
+      secondArgument -= firstArgument;
     }
   }
   return secondArgument;
@@ -19,7 +19,7 @@ const calculateGCD = (number, number2) => {
 const generateRoundData = () => {
   const firstNumber = generateNumber();
   const secondNumber = generateNumber();
-  return [`${firstNumber} ${secondNumber}`, `${calculateGCD(firstNumber, secondNumber)}`];
+  return [`${firstNumber} ${secondNumber}`, String(calculateGCD(firstNumber, secondNumber))];
 };
 
 export default () => {
