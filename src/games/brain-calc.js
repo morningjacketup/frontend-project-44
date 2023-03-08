@@ -1,5 +1,8 @@
 import startGame from '../index.js';
-import generateRandomNumber from '../utils.js';
+import generateNumber from '../utils.js';
+
+const operations = ['+', '-', '*'];
+const QUESTION = 'What is the result of the expression?';
 
 const calculate = (firstNumber, secondNumber, operator) => {
   switch (operator) {
@@ -10,28 +13,20 @@ const calculate = (firstNumber, secondNumber, operator) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      return "operation doesn't exists";
+      throw new Error('Unknown operator!');
   }
 };
 
-const getOperator = () => {
-  const operations = ['+', '-', '*'];
-  return operations[Math.floor(Math.random() * operations.length)];
-};
-
 const generateRoundData = () => {
-  const minNumber = 1;
-  const maxNumber = 100;
-
-  const firstNumber = generateRandomNumber(minNumber, maxNumber);
-  const secondNumber = generateRandomNumber(minNumber, maxNumber);
-  const operator = getOperator();
+  const firstNumber = generateNumber();
+  const secondNumber = generateNumber();
+  const operator = operations[Math.floor(Math.random() * operations.length)];
   return [
     `${firstNumber} ${operator} ${secondNumber}`,
-    `${calculate(firstNumber, secondNumber, operator)}`,
+    String(calculate(firstNumber, secondNumber, operator)),
   ];
 };
 
 export default () => {
-  startGame('What is the result of the expression?', generateRoundData);
+  startGame(QUESTION, generateRoundData);
 };

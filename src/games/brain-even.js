@@ -1,15 +1,14 @@
-import generateRandomNumber from '../utils.js';
+import generateNumber from '../utils.js';
 import startGame from '../index.js';
 
-const generateRoundData = () => {
-  const maxNumber = 100;
-  const minNumber = 1;
+const QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const randomNumber = generateRandomNumber(minNumber, maxNumber);
-  const answer = randomNumber % 2 === 0 ? 'yes' : 'no';
-  return [`${randomNumber}`, answer];
+const generateRoundData = () => {
+  const randomNumber = generateNumber();
+  const isPrime = randomNumber % 2 === 0 ? 'yes' : 'no';
+  return [randomNumber, isPrime];
 };
 
 export default () => {
-  startGame('Answer "yes" if the number is even, otherwise answer "no".', generateRoundData);
+  startGame(QUESTION, generateRoundData);
 };

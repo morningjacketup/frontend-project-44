@@ -1,28 +1,27 @@
 import startGame from '../index.js';
-import generateRandomNumber from '../utils.js';
+import generateNumber from '../utils.js';
+
+const QUESTION = 'Find the greatest common divisor of given numbers.';
 
 const calculateGCD = (number, number2) => {
-  while (number2 !== number) {
+  let firstArgument = number;
+  let secondArgument = number2;
+  while (secondArgument !== firstArgument) {
     if (number > number2) {
-      // eslint-disable-next-line no-param-reassign
-      number -= number2;
+      firstArgument -= number2;
     } else {
-      // eslint-disable-next-line no-param-reassign
-      number2 -= number;
+      secondArgument -= number;
     }
   }
-  return number2;
+  return secondArgument;
 };
 
 const generateRoundData = () => {
-  const maxNumber = 100;
-  const minNumber = 1;
-
-  const firstNumber = generateRandomNumber(minNumber, maxNumber);
-  const secondNumber = generateRandomNumber(minNumber, maxNumber);
+  const firstNumber = generateNumber();
+  const secondNumber = generateNumber();
   return [`${firstNumber} ${secondNumber}`, `${calculateGCD(firstNumber, secondNumber)}`];
 };
 
 export default () => {
-  startGame('Find the greatest common divisor of given numbers.', generateRoundData);
+  startGame(QUESTION, generateRoundData);
 };
