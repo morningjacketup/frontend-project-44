@@ -3,10 +3,12 @@ import startGame from '../index.js';
 
 const QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const isEven = (number) => number % 2 === 0;
+
 const generateRoundData = () => {
   const randomNumber = generateNumber();
-  const isPrime = randomNumber % 2 === 0 ? 'yes' : 'no';
-  return [randomNumber, isPrime];
+  const answer = isEven(randomNumber) ? 'yes' : 'no';
+  return [randomNumber, answer];
 };
 
 export default () => {

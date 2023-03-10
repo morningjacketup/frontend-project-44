@@ -18,7 +18,7 @@ const isPrime = (number) => {
 const generateRoundData = () => {
   const randomNumber = generateNumber();
   const answer = isPrime(randomNumber) ? 'yes' : 'no';
-  return [`${randomNumber}`, answer];
+  return [randomNumber, answer];
 };
 
 export default () => {

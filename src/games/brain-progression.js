@@ -4,11 +4,11 @@ import startGame from '../index.js';
 const QUESTION = 'What number is missing in the progression?';
 
 const generateProgression = (length, start, step) => {
-  const list = [];
+  const progression = [];
   for (let i = 0; i < length; i += 1) {
-    list.push(start + step * i);
+    progression.push(start + step * i);
   }
-  return list;
+  return progression;
 };
 
 const generateRoundData = () => {
@@ -20,11 +20,11 @@ const generateRoundData = () => {
   const randomStart = generateNumber();
   const randomStep = generateNumber(minStepNumber, maxStepNumber);
   const randomLength = generateNumber(minListLength, maxListLength);
-  const list = generateProgression(randomLength, randomStart, randomStep);
-  const randomIndex = generateNumber(0, list.length - 1);
-  const answer = String(list[randomIndex]);
-  list[randomIndex] = '..';
-  const question = list.join(' ');
+  const progression = generateProgression(randomLength, randomStart, randomStep);
+  const randomIndex = generateNumber(0, progression.length - 1);
+  const answer = String(progression[randomIndex]);
+  progression[randomIndex] = '..';
+  const question = progression.join(' ');
   return [question, answer];
 };
 

@@ -13,14 +13,14 @@ const calculate = (firstNumber, secondNumber, operator) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      throw new Error('Unknown operator!');
+      throw new Error(`Unknown operator: '${operator}'`);
   }
 };
 
 const generateRoundData = () => {
   const firstNumber = generateNumber();
   const secondNumber = generateNumber();
-  const operator = operations[Math.floor(Math.random() * operations.length)];
+  const operator = operations[generateNumber(0, operations.length - 1)];
   return [
     `${firstNumber} ${operator} ${secondNumber}`,
     String(calculate(firstNumber, secondNumber, operator)),
