@@ -1,7 +1,7 @@
 import startGame from '../index.js';
 import generateNumber from '../utils.js';
 
-const QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -22,5 +22,5 @@ const generateRoundData = () => {
 };
 
 export default () => {
-  startGame(QUESTION, generateRoundData);
+  startGame(DESCRIPTION, generateRoundData);
 };

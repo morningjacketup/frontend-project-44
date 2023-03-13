@@ -1,7 +1,7 @@
 import generateNumber from '../utils.js';
 import startGame from '../index.js';
 
-const QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -12,5 +12,5 @@ const generateRoundData = () => {
 };
 
 export default () => {
-  startGame(QUESTION, generateRoundData);
+  startGame(DESCRIPTION, generateRoundData);
 };

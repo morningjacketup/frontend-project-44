@@ -1,7 +1,7 @@
 import startGame from '../index.js';
 import generateNumber from '../utils.js';
 
-const QUESTION = 'Find the greatest common divisor of given numbers.';
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 const calculateGCD = (number, number2) => {
   let firstArgument = number;
@@ -23,5 +23,5 @@ const generateRoundData = () => {
 };
 
 export default () => {
-  startGame(QUESTION, generateRoundData);
+  startGame(DESCRIPTION, generateRoundData);
 };
